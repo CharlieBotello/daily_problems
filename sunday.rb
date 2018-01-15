@@ -1,5 +1,4 @@
 
-
 # Read about the Ruby `select` method. Then refactor the code below using `select`.
 
 # numbers = [1, 2, 4, 2]
