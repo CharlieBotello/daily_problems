@@ -5,8 +5,13 @@ items = [
   {id: 2, body: 'bar'},
   {id: 3, body: 'foobar'}
 ]
+p items.map {|i|i[:id]}
 
 
-single_out = items.map{|single|single[:id]}
+# p items.map{|i|i[:id]}
 
-p single_out
+
+
+
+# single_out = items.map{|single|single[:id]}
+
