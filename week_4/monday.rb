@@ -1,14 +1,25 @@
-
-# a = [1, 2, 3, 4, 5]
-# p a.sort { |x,y| y <=> x }
-
-
-# Read about the Ruby `sort` method. Then sort the following array of hashes by age. (Note - do not use the `sort_by` method for this exercise)
+# Use the `sort` method to sort the array of hashes first by age, then by name.
 people = [
-  {"name" => "Saron", "age" => 34},
-  {"name" => "Majora", "age" => 28},
-  {"name" => "Danilo", "age" => 45}
+  {name: "bob", age: 15, gender: "male"},
+  {name: "alice", age: 25, gender: "female"},
+  {name: "bob", age: 56, gender: "male"},
+  {name: "dave", age: 45, gender: "male"},
+  {name: "alice", age: 56, gender: "female"},
+  {name: "adam", age: 15, gender: "male"}
 ]
 
 
-p people.sort {|first,last| first["age"]<=>last["age"]}
+p people = people.sort { |first, last| [first[:age], first[:name]]<=>[last[:age], last[:name]] }
+
+
+
+
+# The result should be:
+# [
+#   {:name=>"adam", :age=>15, :gender=>"male"},
+#   {:name=>"bob", :age=>15, :gender=>"male"},
+#   {:name=>"alice", :age=>25, :gender=>"female"},
+#   {:name=>"dave", :age=>45, :gender=>"male"},
+#   {:name=>"alice", :age=>56, :gender=>"female"},
+#   {:name=>"bob", :age=>56, :gender=>"male"}
+# ]

@@ -1,25 +1,15 @@
-# Use the `sort` method to sort the array of hashes first by age, then by name.
-people = [
-  {name: "bob", age: 15, gender: "male"},
-  {name: "alice", age: 25, gender: "female"},
-  {name: "bob", age: 56, gender: "male"},
-  {name: "dave", age: 45, gender: "male"},
-  {name: "alice", age: 56, gender: "female"},
-  {name: "adam", age: 15, gender: "male"}
+# Use the `sort` and `map` methods to convert the array of hashes
+movies = [
+  {id: 1, title: "Die Hard", rating: 4.0},
+  {id: 2, title: "Bad Boys", rating: 5.0},
+  {id: 3, title: "The Chamber", rating: 3.0},
+  {id: 4, title: "Fracture", rating: 2.0}
 ]
 
 
-p people = people.sort { |first, last| [first[:age], first[:name]]<=>[last[:age], last[:name]] }
+# p movies.map.with_index { |a,b| a[:title] }.sort
+# into an array of titles sorted by their ratings highest to lowest. The result should be:
 
+p movies.sort {|first,last| last[:rating]<=>first[:rating]}.map {|movie| movie[:title]}
+# ["Bad Boys", "Die Hard", "The Chamber", "Fracture"]
 
-
-
-# The result should be:
-# [
-#   {:name=>"adam", :age=>15, :gender=>"male"},
-#   {:name=>"bob", :age=>15, :gender=>"male"},
-#   {:name=>"alice", :age=>25, :gender=>"female"},
-#   {:name=>"dave", :age=>45, :gender=>"male"},
-#   {:name=>"alice", :age=>56, :gender=>"female"},
-#   {:name=>"bob", :age=>56, :gender=>"male"}
-# ]
