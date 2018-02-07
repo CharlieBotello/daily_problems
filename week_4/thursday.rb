@@ -21,9 +21,9 @@ def find_missing_letter(string)
   all_letters = f_letter.upto(l_letter).to_a
   missing = all_letters - string 
   if missing == []
-  return nil
+    return nil
   else
-  return missing
+    return missing
   end  
 end 
 

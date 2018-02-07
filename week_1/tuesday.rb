@@ -10,6 +10,7 @@ fruits = [
 # {"apple" => "red", "banana" => "yellow", "grape" => "purple"}
 p fruits.map{|n|[n["name"], n["color"]]}.to_h
 
+
   
 
 
