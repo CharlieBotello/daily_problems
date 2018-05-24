@@ -8,7 +8,7 @@ fruits = [
 
 # into a single hash where the keys are the names and the values are the colors. The result should look like:
 # {"apple" => "red", "banana" => "yellow", "grape" => "purple"}
-p fruits.map{|n|[n["name"], n["color"]]}.to_h
+p fruits.map! {|index| [index["name"], index["color"]]}.to_h
 
 
   

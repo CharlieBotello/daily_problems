@@ -9,10 +9,13 @@
 # p doubled_numbers
 
 
-
-
 numbers = [1, 2, 3, 4]
+double = []
+  numbers.each do |number|
+    double << number * 2 unless number == nil 
+  end 
+p double
 
-doubled_numbers = numbers.map!{|number|number * 2}
 
-p doubled_numbers
+numbers.map! {|number| number * 2}
+p numbers
